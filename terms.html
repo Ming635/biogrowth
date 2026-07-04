@@ -4,25 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Terms of Use - BioGrowth Merchants LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #1f2937; }
-        h1 { color: #046a38; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
-        h2 { color: #046a38; margin-top: 30px; font-size: 1.4rem; }
-        p { color: #4b5563; }
+        :root {
+            --brand-green: #046a38;
+            --brand-light-green: #f3f6ed;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --border-color: #e5e7eb;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #ffffff;
+        }
+        .legal-header {
+            max-width: 1312px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--brand-green);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .logo:hover {
+            opacity: 0.8;
+        }
+        .back-link {
+            font-size: 0.9rem;
+            color: var(--brand-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .content-container {
+            max-width: 800px; 
+            margin: 60px auto; 
+            padding: 0 20px; 
+        }
+        h1 { 
+            font-family: 'Playfair Display', serif;
+            color: var(--brand-green); 
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+        h2 { 
+            font-family: 'Playfair Display', serif;
+            color: var(--brand-green); 
+            margin-top: 35px; 
+            font-size: 1.4rem; 
+            font-weight: 600;
+        }
+        p { color: var(--text-muted); }
     </style>
 </head>
 <body>
-    <h1>Vendor Terms of Use</h1>
-    <p><strong>Last Updated: July 2026</strong></p>
-    <p>Welcome to the official business portfolio node of BioGrowth Merchants LLC. Accessing or interfacing with this vendor-facing framework confirms unconditional adherence to the specified commercial stipulations.</p>
-    
-    <h2>1. Institutional Alignment & Scope</h2>
-    <p>This single-page showcase infrastructure is structured exclusively for high-volume B2B evaluations. All structural categories, technical stats, logistics references, and compliance data published serve purely to guide onboarding discussions with enterprise retail brokers and hardware platform category directors.</p>
-    
-    <h2>2. Proprietary Intellectual Material</h2>
-    <p>The layout frameworks, botanical categorizations, and descriptive data assets contained within this architecture constitute intellectual properties of BioGrowth Merchants LLC and cannot be repurposed without written authorization.</p>
-    
-    <h2>3. Jurisdiction & Governing Authority</h2>
-    <p>Any corporate dialogues, requests for proposals (RFP), pricing audits, or subsequent supply disputes initiated through this digital profile are regulated explicitly under the statutory legal mandates of the **State of New Mexico, United States**, without regard to alternate global or inter-state conflict frameworks.</p>
+
+    <header class="legal-header">
+        <a href="index.html" class="logo">BioGrowth Merchants</a>
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </header>
+
+    <div class="content-container">
+        <h1>Vendor Terms of Use</h1>
+        <p class="date"><strong>Last Updated: July 2026</strong></p>
+        <p>Welcome to the official business portfolio node of BioGrowth Merchants LLC. Accessing or interfacing with this vendor-facing framework confirms unconditional adherence to the specified commercial stipulations.</p>
+        
+        <h2>1. Institutional Alignment & Scope</h2>
+        <p>This single-page showcase infrastructure is structured exclusively for high-volume B2B evaluations. All structural categories, technical stats, logistics references, and compliance data published serve purely to guide onboarding discussions with enterprise retail brokers and hardware platform category directors.</p>
+        
+        <h2>2. Proprietary Intellectual Material</h2>
+        <p>The layout frameworks, botanical categorizations, and descriptive data assets contained within this architecture constitute intellectual properties of BioGrowth Merchants LLC and cannot be repurposed without written authorization.</p>
+        
+        <h2>3. Jurisdiction & Governing Authority</h2>
+        <p>Any corporate dialogues, requests for proposals (RFP), pricing audits, or subsequent supply disputes initiated through this digital profile are regulated explicitly under the statutory legal mandates of the **State of New Mexico, United States**, without regard to alternate global or inter-state conflict frameworks.</p>
+    </div>
+
 </body>
 </html>
