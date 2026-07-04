@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioGrowth Merchants | Enterprise Retail Supplier & Seed Merchant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-green: #046a38;
+            --brand-light-green: #f3f6ed;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --border-color: #e5e7eb;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* 顶部通栏 */
+        .header-bar {
+            max-width: 1312px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--brand-green);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .header-contact-info {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--brand-green);
+            background-color: var(--brand-light-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        /* 1. Hero 业务总括区 */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            max-width: 1312px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-tag {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--brand-green);
+            margin-bottom: 15px;
+        }
+
+        .hero-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.15;
+            color: var(--brand-green);
+            margin: 0 0 25px 0;
+        }
+
+        .hero-subhead {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+
+        .hero-image-wrapper {
+            flex: 1;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            object-fit: cover;
+            aspect-ratio: 4/3;
+        }
+
+        .primary-btn {
+            display: inline-block;
+            background-color: var(--brand-green);
+            color: #ffffff;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 16px 35px;
+            border-radius: 8px;
+            border: 2px solid var(--brand-green);
+            transition: all 0.3s ease;
+        }
+
+        .primary-btn:hover {
+            background-color: transparent;
+            color: var(--brand-green);
+        }
+
+        /* 2. 核心大厂服务能力 */
+        .services-section {
+            background-color: var(--brand-light-green);
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1312px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--brand-green);
+            text-align: center;
+            margin: 0 0 15px 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 60px auto;
+            font-size: 1.05rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--brand-green);
+            margin: 0 0 15px 0;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* 3. 植物花卉种子四大分类矩阵 */
+        .portfolio-section {
+            padding: 80px 20px;
+            background-color: #ffffff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1312px;
+            margin: 0 auto;
+        }
+
+        .portfolio-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .portfolio-info {
+            padding: 20px;
+        }
+
+        .portfolio-info .category-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--brand-green);
+            letter-spacing: 0.05em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .portfolio-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            margin: 0 0 10px 0;
+            color: var(--text-dark);
+        }
+
+        .portfolio-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 15px 0;
+        }
+
+        .spec-meta {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 12px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .spec-meta strong {
+            color: var(--text-dark);
+        }
+
+        /* 4. 供应链数据背书区 */
+        .stats-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: var(--brand-light-green);
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-item .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--brand-green);
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-item .label {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* 5. 留资系统 */
+        .contact-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            text-align: left;
+            margin-top: 40px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--brand-green);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--brand-green);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #03522a;
+        }
+
+        /* 6. 公司法务合规专属页脚区 */
+        .corporate-info-footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 60px 20px 20px;
+            font-size: 0.88rem;
+            border-top: 4px solid var(--brand-green);
+        }
+
+        .corporate-footer-grid {
+            max-width: 1312px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #374151;
+        }
+
+        .footer-brand h3 {
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin: 0 0 15px 0;
+        }
+
+        .footer-brand p, .footer-legal p {
+            margin: 5px 0;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .footer-legal h4 {
+            color: #ffffff;
+            margin: 0 0 15px 0;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links-inline {
+            margin-top: 15px;
+        }
+
+        .footer-links-inline a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links-inline a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .copyright-bar {
+            max-width: 1312px;
+            margin: 20px auto 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        /* 响应式媒体查询适配 */
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                padding: 40px 20px;
+                text-align: center;
+            }
+            .hero-headline {
+                font-size: 2.5rem;
+            }
+            .services-grid, .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid, .corporate-footer-grid {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 40px;
+            }
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶栏 -->
+    <header class="header-bar">
+        <a href="#" class="logo">BioGrowth Merchants</a>
+        <div class="header-contact-info">✓ Certified B2B Retail Program Participant</div>
+    </header>
+
+    <!-- 1. Hero 业务总括区 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-tag">High-Volume Retail Integration</div>
+            <h1 class="hero-headline">Enterprise-Grade Bulk Flower Seeds</h1>
+            <p class="hero-subhead">We engineer resilient botanical supply chains to provide North American big-box home improvement retail channels with superior, high-germination flower seed varieties.</p>
+            <a href="#contact" class="primary-btn">Access Corporate Supplier Portal</a>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="BioGrowth Enterprise Plantation" class="hero-image">
+        </div>
+    </section>
+
+    <!-- 2. 核心大厂服务能力 -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Retail Supply & Compliance Core</h2>
+            <p class="section-subtitle">Our infrastructure is purpose-built to execute the massive category volumes, stringent routing guide instructions, and strict delivery precision demanded by national retail platforms.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>1. Compliant Turnkey Packaging</h3>
+                    <p>Fully barcoded, serialized, PEG-hook ready consumer retail packaging meticulously structured in accordance with national hardware store merchandising parameters.</p>
+                </div>
+                <div class="service-card">
+                    <h3>2. Direct-to-RDC Logistics</h3>
+                    <p>Integrated freight networks completely compatible with major North American Regional Distribution Center (RDC) cross-dock routing, standard palletizing, and scheduling mandates.</p>
+                </div>
+                <div class="service-card">
+                    <h3>3. Regulatory Verification</h3>
+                    <p>Comprehensive lot-by-lot tracking tied with instant USDA-compliant phytosanitary documentation and absolute purity analysis, securing hassle-free regional movement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 植物花卉种子四大分类矩阵 -->
+    <section class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Our Botanical Portfolio</h2>
+            <p class="section-subtitle">A professional audit preview of our standardized bulk flower seed selections, explicitly bred for high shelf-life stability and reliable residential landscaping performance.</p>
+            
+            <div class="portfolio-grid">
+                <!-- 类别 1 -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=400&q=80" alt="Vibrant Sunflowers">
+                    <div class="portfolio-info">
+                        <span class="category-tag">Premium Annuals</span>
+                        <h3>Vibrant Sunflowers</h3>
+                        <p>High-yield, fast-growth annual flower varieties meticulously graded for summer residential gardening setups.</p>
+                        <div class="spec-meta">
+                            <span>USDA Zones: <strong>3 - 10</strong></span>
+                            <span>Germination: <strong>95%+</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 类别 2 -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=400&q=80" alt="Purple Coneflower">
+                    <div class="portfolio-info">
+                        <span class="category-tag">Hardy Perennials</span>
+                        <h3>Purple Coneflower</h3>
+                        <p>Drought-tolerant, hardy perennial seed items optimized for long-term landscaping projects and perennial garden sets.</p>
+                        <div class="spec-meta">
+                            <span>USDA Zones: <strong>3 - 9</strong></span>
+                            <span>Germination: <strong>92%+</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 类别 3 (已修复 404 故障图片链接) -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=400&q=80" alt="Pollinator Wildflowers">
+                    <div class="portfolio-info">
+                        <span class="category-tag">Ecological Mixes</span>
+                        <h3>Pollinator Wildflowers</h3>
+                        <p>Premium, eco-conscious flower seed mixtures blended natively to support honeybees, monarch butterflies, and local ecosystems.</p>
+                        <div class="spec-meta">
+                            <span>USDA Zones: <strong>4 - 9</strong></span>
+                            <span>Germination: <strong>94%+</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 类别 4 -->
+                <div class="portfolio-card">
+                    <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=400&q=80" alt="Compact Marigolds">
+                    <div class="portfolio-info">
+                        <span class="category-tag">Container & Border</span>
+                        <h3>Compact Marigolds</h3>
+                        <p>Low-height, resilient border varieties ideal for suburban patio planter pots, urban flower boxes, and landscape edges.</p>
+                        <div class="spec-meta">
+                            <span>USDA Zones: <strong>2 - 11</strong></span>
+                            <span>Germination: <strong>96%+</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 供应链数据背书区 -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="number">100%</div>
+                <div class="label">Non-GMO Verified</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">94%+</div>
+                <div class="label">Average Germination Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="number">EDI</div>
+                <div class="label">Supply-Chain Ready</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 留资系统 -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Vendor & Merchant Inquiries</h2>
+        <p class="section-subtitle">Are you a big-box platform category manager or corporate merchant? Submit your required onboarding parameters below to formalize documentation requests, seed purity records, or standard RFQ schedules.</p>
+        
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Procurement Manager / Corporate Retailer Name</label>
+                <input type="text" id="name" name="name" class="form-control" required placeholder="e.g. Lowe's Onboarding Team / Corporate Merchandising Division">
+            </div>
+            <div class="form-group">
+                <label for="email">Official Corporate Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required placeholder="buyer@retailer-corporate.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Compliance, SKU Volume, & Onboarding Guidelines</label>
+                <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Please state your expected annual SKU count, required EDI setup standards, or internal supplier packaging guide specifications..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Corporate Vendor Inquiry</button>
+        </form>
+    </section>
+
+    <!-- 6. 核心实体法务页脚区 -->
+    <footer class="corporate-info-footer">
+        <div class="corporate-footer-grid">
+            <div class="footer-brand">
+                <h3>BioGrowth Merchants LLC</h3>
+                <p><strong>Corporate Operations Address:</strong></p>
+                <p>1209 Mountain Road PL NE, Suite STE R</p>
+                <p>Albuquerque, New Mexico 87110</p>
+                <p>United States</p>
+            </div>
+            <div class="footer-legal">
+                <h4>Supplier Transparency & Compliance</h4>
+                <p>BioGrowth Merchants LLC operates in strict alignment with Federal Seed Act compliance protocols, North American phytosanitary logistics tracking standards, and secure enterprise electronic data exchanges (EDI).</p>
+                <div class="footer-links-inline">
+                    <a href="privacy.html">Privacy Policy</a> | 
+                    <a href="terms.html">Vendor Terms of Use</a> | 
+                    <a href="usda.html">USDA Compliance Statement</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            <p>&copy; 2026 BioGrowth Merchants LLC. All Rights Reserved. General Corporate & High-Volume Horticultural Supplier Profile Section.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
